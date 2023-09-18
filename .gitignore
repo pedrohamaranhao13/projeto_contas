@@ -1,0 +1,47 @@
+# Arquivos de compilação e saída
+bin/
+target/
+*.class
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.iml
+
+# Arquivos de log e saída
+logs/
+*.log
+
+# Dependências Maven
+/.mvn/
+target/
+
+# Arquivos de build
+build/
+
+# Arquivos temporários
+*.tmp
+*.swp
+*~
+
+# Arquivos gerados pelo Maven
+maven-archiver/
+target-maven-plugin-markers/
+
+# Cache do Eclipse
+.settings/
+.metadata/
+
+# Dependências específicas do Eclipse
+.classpath
+.project
+
+# Dependências específicas do IntelliJ IDEA
+*.iws
+*.ipr
+
+# Arquivos de configuração do NetBeans
+nb-configuration.xml
+
+# Logs e diretórios específicos do Spring Boot
+spring-boot-actuator/

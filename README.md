@@ -11,5 +11,3 @@ Antes de executar o projeto, certifique-se de que você tenha instalado os segui
 - [Apache Tomcat 9](https://tomcat.apache.org/download-90.cgi): O servidor web Tomcat é utilizado para implantar a aplicação. Faça o download e siga as instruções de instalação apropriadas para o seu sistema operacional.
 
 - [PostgreSQL 15](https://www.postgresql.org/download/): O PostgreSQL é o sistema de gerenciamento de banco de dados usado para armazenar dados financeiros. Baixe e instale o PostgreSQL seguindo as instruções para o seu sistema operacional.
-
-# projeto_contas

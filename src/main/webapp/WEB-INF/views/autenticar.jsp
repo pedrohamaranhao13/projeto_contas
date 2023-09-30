@@ -30,21 +30,33 @@
 						<p>Entre com as suas credenciais de acesso:</p>
 					</div>
 
-					<form id="formAutenticar" action="">
+					<div class="text-center text-danger">
+						<h3>${mensagem_erro}</h3>
+					</div>
+					
+					<form id="formAutenticar" method="post" action="autenticar-post">
 						<div class="mb-2">
-							<label>E-mail de acesso:</label> <input id="email" type="text"
-								name="email" class="form-control"
-								placeholder="Digite seu e-mail aqui">
+							<label>E-mail de acesso:</label> 
+							<input	 id="email" 
+											type="text"
+											name="email"
+											class="form-control"
+											placeholder="Digite seu e-mail aqui">
 						</div>
 
 						<div class="mb-2">
-							<label>Senha de acesso:</label> <input id="senha" name="senha"
-								type="password" class="form-control"
-								placeholder="Digite sua senha aqui">
+							<label>Senha de acesso:</label> 
+							<input 	id="senha" 
+											name="senha"
+											type="password" 
+											class="form-control"
+											placeholder="Digite sua senha aqui">
 						</div>
 
 						<div class="mb-2 d-grid">
-							<input type="submit" class="btn btn-primary" value="Entrar" />
+							<input	type="submit" 
+											class="btn btn-primary" 
+											value="Entrar" />
 						</div>
 					</form>
 

@@ -48,5 +48,31 @@ public class UsuarioRepository {
 		return usuario;
 	
 	}
+	
+	public Usuario find(String email, String senha) throws Exception{
+		
+		Connection connection = ConnectionFactory.getConnection();
+		
+		String query ="select * from usuario where email = ? and senha = ?";
+		PreparedStatement statement = connection.prepareStatement(query);
+		statement.setString(1, email);
+		statement.setString(2, senha);
+		
+		ResultSet resultSet = statement.executeQuery();
+		
+		Usuario usuario = null;
+		
+		if (resultSet.next()) {
+			usuario =new Usuario();
+			usuario.setIdUsuario(resultSet.getInt("idusuario"));
+			usuario.setNome(resultSet.getString("nome"));
+			usuario .setEmail(resultSet.getString("email"));
+		}
+		
+		connection.close();
+		
+		return usuario;
+		
+	}
 
 }

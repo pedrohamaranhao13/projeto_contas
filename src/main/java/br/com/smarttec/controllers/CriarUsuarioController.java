@@ -43,7 +43,7 @@ public class CriarUsuarioController {
 				modelAndView.addObject("mensagem_sucesso", "Usuário cadastrado com sucesso!");
 			}
 			else {
-				throw new Exception("O e-mail cadastrado já está cadastrado para outro usuário.");
+				throw new Exception("O e-mail informado já está cadastrado para outro usuário.");
 			}	
 			
 		} catch (Exception e) {

@@ -38,29 +38,40 @@
 						<h3>${mensagem_erro}</h3>
 					</div>
 
-					<form id="formCriarUsuario" method="post"
-						action="criar-usuario-post">
+					<form id="formCriarUsuario" method="post" action="criar-usuario-post">
 						<div class="mb0-2">
-							<label>Nome do usuário:</label> <input id="name" type="text"
-								name="nome" class="form-control"
-								placeholder="Digite seu nome aqui">
+							<label>Nome do usuário:</label> 
+							<input 	id="name" 
+											type="text"
+											name="nome" 
+											class="form-control"
+											placeholder="Digite seu nome aqui">
 						</div>
 						<div class="mb0-2">
-							<label>E-mail de acesso:</label> <input id="email" type="text"
-								name="email" class="form-control"
-								placeholder="Digite seu e-mail aqui">
+							<label>E-mail de acesso:</label> 
+							<input 	id="email" 
+											type="text"
+											name="email" 
+											class="form-control"
+											placeholder="Digite seu e-mail aqui">
 						</div>
 
 						<div class="mb-2">
-							<label>Senha de acesso:</label> <input id="senha" type="password"
-								class="form-control" name="senha"
-								placeholder="Digite sua senha aqui">
+							<label>Senha de acesso:</label> 
+							<input  	id="senha"
+											type="password"
+											class="form-control" 
+											name="senha"
+											placeholder="Digite sua senha aqui">
 						</div>
 
 						<div class="mb-2">
-							<label>Confirmar a sua senha:</label> <input
-								id="senhaConfirmacao" type="password" class="form-control"
-								name="senhaConfirmacao" placeholder="Confirme sua senha aqui">
+							<label>Confirmar a sua senha:</label> 
+							<input	id="senhaConfirmacao" 
+											type="password" 
+											class="form-control"
+											name="senhaConfirmacao" 
+											placeholder="Confirme sua senha aqui">
 						</div>
 
 						<div class="mb-2 d-grid">

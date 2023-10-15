@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8"">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Projeto Contas</title>
 
@@ -18,7 +18,7 @@
 <body class="bg-secondary">
 
 	<div class="row mx-0 mx">
-		<div class="col-12 col-md-4 offset-md-4 col-xl-6 mx-auto">
+		<div class="col-12 col-md-6 offset-md-6 col-xl-6 mx-auto">
 			<div class="card mt-5">
 				<div class=card-body>
 

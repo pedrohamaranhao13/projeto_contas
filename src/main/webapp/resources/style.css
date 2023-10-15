@@ -3,6 +3,6 @@ label.error {
 	color: #d9534f;
 }
 
-input.error {
+input.error, textarea.error, select.error {
 	border: 2px solid #d9534f;
 }

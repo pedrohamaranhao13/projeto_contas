@@ -21,7 +21,7 @@
 				<div class=card-body>
 
 					<div class="text-center">
-						<img alt="member login"
+						<img class="mb-3" alt="member login"
 							src="https://www.pngmart.com/files/3/Member-Login-Button-PNG-File.png"
 							width="70%">
 						<h2>Esqueci minha senha</h2>
@@ -29,9 +29,11 @@
 					</div>
 
 					<form action="">
-						<div class="mb0-2">
-							<label>E-mail de acesso:</label> <input type="text"
-								class="form-control" placeholder="Digite seu e-mail aqui">
+						<div class="mb-3  form-floating">
+							 <input type="text"
+								class="form-control" 
+								placeholder="Digite seu e-mail aqui">
+							  <label>E-mail de acesso:</label>
 						</div>
 						<div class="mb-2 d-grid">
 							<input type="submit" class="btn btn-primary" value="Recuperar senha de acesso" />

@@ -21,7 +21,7 @@ public class UsuarioRepository {
 		statement.setString(3, usuario.getSenha());
 		statement.execute();
 		
-		statement.close();
+		connection.close();
 		
 	}
 	

@@ -23,7 +23,7 @@
 				<div class=card-body>
 
 					<div class="text-center">
-						<img alt="member login"
+						<img class="mb-3" alt="member login"
 							src="https://www.pngmart.com/files/3/Member-Login-Button-PNG-File.png"
 							width="70%">
 						<h2>Criar conta de usuário</h2>
@@ -39,39 +39,40 @@
 					</div>
 
 					<form id="formCriarUsuario" method="post" action="criar-usuario-post">
-						<div class="mb0-2">
-							<label>Nome do usuário:</label> 
+						<div class="mb-3 form-floating">
 							<input 	id="name" 
 											type="text"
+											id="floatingNome"
 											name="nome" 
 											class="form-control"
 											placeholder="Digite seu nome aqui">
+							<label>Nome do usuário:</label> 
 						</div>
-						<div class="mb0-2">
-							<label>E-mail de acesso:</label> 
+						<div class="mb-3 form-floating">
 							<input 	id="email" 
 											type="text"
 											name="email" 
 											class="form-control"
 											placeholder="Digite seu e-mail aqui">
+							<label>E-mail de acesso:</label> 
 						</div>
 
-						<div class="mb-2">
-							<label>Senha de acesso:</label> 
+						<div class="mb-3 form-floating">
 							<input  	id="senha"
 											type="password"
 											class="form-control" 
 											name="senha"
 											placeholder="Digite sua senha aqui">
+							<label>Senha de acesso:</label> 
 						</div>
 
-						<div class="mb-2">
-							<label>Confirmar a sua senha:</label> 
+						<div class="mb-3 form-floating">
 							<input	id="senhaConfirmacao" 
 											type="password" 
 											class="form-control"
 											name="senhaConfirmacao" 
 											placeholder="Confirme sua senha aqui">
+							<label>Confirmar a sua senha:</label> 
 						</div>
 
 						<div class="mb-2 d-grid">

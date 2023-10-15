@@ -17,13 +17,13 @@
 </head>
 <body class="bg-secondary">
 
-	<div class="row">
-		<div class="col-md-4 offset-md-4">
+	<div class="row mx-0 mx">
+		<div class="col-12 col-md-4 offset-md-4 col-xl-6 mx-auto">
 			<div class="card mt-5">
 				<div class=card-body>
 
 					<div class="text-center">
-						<img alt="member login"
+						<img class="py-3" alt="member login"
 							src="https://www.pngmart.com/files/3/Member-Login-Button-PNG-File.png"
 							width="70%">
 						<h2>Acesso ao Sistema</h2>
@@ -36,7 +36,7 @@
 					
 					<form id="formAutenticar" method="post" action="autenticar-post">
 						<div class="mb-2">
-							<label>E-mail de acesso:</label> 
+							<label class="py-3" >E-mail de acesso:</label> 
 							<input	 id="email" 
 											type="text"
 											name="email"

@@ -8,21 +8,18 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 import br.com.smarttec.entities.Conta;
 import br.com.smarttec.factories.ConnectionFactory;
 
 public class ContaRepository {
 
-	public void create(Conta conta) throws Exception{
-		
+	public void create(Conta conta) throws Exception {
+
 		Connection connection = ConnectionFactory.getConnection();
 		
 		String query = "insert into conta(nome, data, valor, tipo, descricao, idusuario) values(?,?,?,?,?,?)";
 		
 		PreparedStatement statement = connection.prepareStatement(query);
-		
 		statement.setString(1, conta.getNome());
 		statement.setDate(2, new java.sql.Date(conta.getData().getTime()));
 		statement.setDouble(3, conta.getValor());
@@ -32,17 +29,15 @@ public class ContaRepository {
 		statement.execute();
 		
 		connection.close();
-		
-	} 
-	
-	public void update(Conta conta) throws Exception{
-		
+	}
+
+	public void update(Conta conta) throws Exception {
+
 		Connection connection = ConnectionFactory.getConnection();
 		
-		String query = "update conta set nome =?, data=?, valor=?, tipo=?, descricao=?, where idconta=?";
+		String query = "update conta set nome=?, data=?, valor=?, tipo=?, descricao=? where idconta=?";
 		
 		PreparedStatement statement = connection.prepareStatement(query);
-		
 		statement.setString(1, conta.getNome());
 		statement.setDate(2, new java.sql.Date(conta.getData().getTime()));
 		statement.setDouble(3, conta.getValor());
@@ -52,11 +47,10 @@ public class ContaRepository {
 		statement.execute();
 		
 		connection.close();
-		
 	}
-	
-	public void delete(Conta conta) throws Exception{
-		 
+
+	public void delete(Conta conta) throws Exception {
+
 		Connection connection = ConnectionFactory.getConnection();
 		
 		String query = "delete from conta where idconta=?";
@@ -66,19 +60,20 @@ public class ContaRepository {
 		statement.execute();
 		
 		connection.close();
-		
-	} 
-	
+	}
+
 	public List<Conta> findByDatas(Date dataMin, Date dataMax, Integer idUsuario) throws Exception {
+
 		Connection connection = ConnectionFactory.getConnection();
 		
-		String query = "select * from conta where data between ? and ? and idusuario=? order by data desc";
+		String query = "select * from conta "
+				+ "where data between ? and ? and idusuario=? "
+				+ "order by data desc";
 		
 		PreparedStatement statement = connection.prepareStatement(query);
 		statement.setDate(1, new java.sql.Date(dataMin.getTime()));
 		statement.setDate(2, new java.sql.Date(dataMax.getTime()));
 		statement.setInt(3, idUsuario);
-		
 		ResultSet resultSet = statement.executeQuery();
 		
 		List<Conta> lista = new ArrayList<Conta>();
@@ -93,7 +88,7 @@ public class ContaRepository {
 			conta.setValor(resultSet.getDouble("valor"));
 			conta.setTipo(resultSet.getInt("tipo"));
 			conta.setDescricao(resultSet.getString("descricao"));
-			conta.setIdConta(resultSet.getInt("idusuario"));
+			conta.setIdUsuario(resultSet.getInt("idusuario"));
 			
 			lista.add(conta);
 		}
@@ -101,33 +96,33 @@ public class ContaRepository {
 		connection.close();
 		return lista;
 	}
-	
-	public Conta findById(Integer idConta) throws Exception{
+
+	public Conta findById(Integer idConta) throws Exception {
 
 		Connection connection = ConnectionFactory.getConnection();
 		
-		String query = "select * from conta where  idconta=? ";
+		String query = "select * from conta where idconta=?";
 		
 		PreparedStatement statement = connection.prepareStatement(query);
 		statement.setInt(1, idConta);
-		
 		ResultSet resultSet = statement.executeQuery();
 		
 		Conta conta = null;
 		
-		if (resultSet.next()) {
+		if(resultSet.next()) {
+			
 			conta = new Conta();
+			
 			conta.setIdConta(resultSet.getInt("idconta"));
 			conta.setNome(resultSet.getString("nome"));
 			conta.setData(new SimpleDateFormat("yyyy-MM-dd").parse(resultSet.getString("data")));
 			conta.setValor(resultSet.getDouble("valor"));
 			conta.setTipo(resultSet.getInt("tipo"));
 			conta.setDescricao(resultSet.getString("descricao"));
-			conta.setIdConta(resultSet.getInt("idusuario"));
+			conta.setIdUsuario(resultSet.getInt("idusuario"));			
 		}
 		
 		connection.close();
 		return conta;
 	}
-	
 }

@@ -27,10 +27,20 @@
 						<h2>Esqueci minha senha</h2>
 						<p>Preencha os dados para recuperar seu acesso:</p>
 					</div>
+					
+					<div class="text-center text-success">
+						<h3>${mensagem_sucesso}</h3>
+					</div>
 
-					<form action="">
+					<div class="text-center text-danger">
+						<h3>${mensagem_erro}</h3>
+					</div>
+
+					<form action="recuperar-senha" method="post">
 						<div class="mb-3  form-floating">
-							 <input type="text"
+							 <input type="email"
+							 	name="email"
+							 	id="email"
 								class="form-control" 
 								placeholder="Digite seu e-mail aqui">
 							  <label>E-mail de acesso:</label>

@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
 	<div class="container">
 		<a class="navbar-brand text-white" href="#"><strong>Projeto
@@ -28,7 +32,8 @@
 					onclick="javascript:return confirm('Deseja realmente sair do sistema?')" >Sair do Sistema
 			</a>
 		</div>
-	</div>
+		<div class="d-flex"><p class="text-light mt-1 me-3">${project.version}</p></div>
+	</div> 
 </nav>
 
 

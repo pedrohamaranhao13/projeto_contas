@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8"">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Projeto Contas</title>
 
@@ -45,7 +45,7 @@
 											id="floatingNome"
 											name="nome" 
 											class="form-control"
-											placeholder="Digite seu nome aqui">
+											placeholder="Digite seu nome aqui" />
 							<label>Nome do usuário:</label> 
 						</div>
 						<div class="mb-3 form-floating">
